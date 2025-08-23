@@ -427,6 +427,79 @@ footer .partners {
   animation: fadeOut 6s ease-in;
   /* makes it unclickable after fade */
 }
+
+.gallery-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.gallery-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.gallery-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.pet-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.pet-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.pet-info {
+  padding: 15px;
+}
+.pet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/*  */
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  text-align: center;
+}
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+}
+.contact-form .btn {
+  padding: 12px;
+  background: #ff6b6b;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form .btn:hover {
+  background: #ff3b3b;
+  transform: scale(1.05);
+}
 @keyframes fadeOut {
   from {
     opacity: 1;
