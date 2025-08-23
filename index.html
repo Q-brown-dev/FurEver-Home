@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-brwon Animal Shelter</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <section id="header">
+    
+    <header id="mainHeader">
+      <div class="logo">
+        FurEver Home
+      </div>
+  
+      <nav>
+        <li><a href="#" class="link-for-a underline">Home</a></li>
+        <li><a href="# " class="link-for-a">Blog</a></li>
+        <li><a href="#" class="link-for-a">About</a></li>
+        <li><a href="#" class="link-for-a">Contact</a></li>
+      </nav>
+  
+  
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Light Mode
+        </a>
+  
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" onclick="darkMode()" href="#">Dark Mode</a></li>
+        </ul>
+      </div>
+  
+      <div class="cartt">
+        <div onclick="openCart()" class="open-cart">Cart (<span id="cart-count">0</span>)&#128722;</div>
+      </div>
+    </header>
+  </section>
+
+
+
+  <section class="hero" id="hero">
+
+    <figure>
+      <img src="images/new/Beautiful interior bedroom.png" alt="">
+    </figure>
+    <div class="hero-text">
+      <h2>Q-brown</h2>
+      <p>You'r One-Stop-Destination for U To pick
+      <blockquote>a best friend</blockquote>
+      </p>
+    </div>
+  </section>
+  <div class="cart" id="cart">
+    <div class="cartt">
+      <a href="#">Cart (<span id="cart-count">0 </span>)&#128722;</a>
+    </div>
+    <h2>Your Cart</h2>
+
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button class="button" onclick="closeCart()">Close cart</button>
+  </div>
+
+  <div class="cart-container" id="cart-container">
+    <div class="cart-item"></div>
+  </div>
+
+  <!-- Table Content -->
+  <h2>Pets Available</h2>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-for-table-head" scope="col">#</th>
+        <th class="text-for-table-head" scope="col">Types of pet</th>
+        <th class="text-for-table-head" scope="col">Breed</th>
+        <th class="text-for-table-head" scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text" scope="row">1</th>
+        <td class="text-for-pet-name">Dogs</td>
+        <td><a class="text" href="Dogs.html">German e.t.c.</a></td>
+        <td class="text">@mdo</td>
+      </tr>
+      <tr>
+        <th class="text" scope="row">2</th>
+        <td class="text-for-pet-name">Cats</td>
+        <td><a class="text" href="#">Thornton</a></td>
+        <td class="text">@fat</td>
+      </tr>
+      <tr class="Un-available">
+        <th class="text" scope="row">3</th>
+        <td class="text" colspan="2">Bird</td>
+        <td class="text">Out of Stock</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <!-- Popular Pet's -->
+
+  <!-- Product Section -->
+  <section class="products">
+    <div class="container">
+      <h2>Popular Pets</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="images/dogs (1).png" alt="Product 1">
+          <h3>Product 1</h3>
+          <p id="price11" class="price"> ₦25,641</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button id="product1" class="cart-btn"
+            onclick="addToCart('German Sherperd ',25641, './images/dogs (1).png')">Add
+            to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="images/dogs (2).png" alt="Product 2">
+          <h3>Product 2</h3>
+          <p class="price" id="Price12">₦15,837</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 2', 15837, './images/dogs (2).png')">Add to
+            Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="images/dogs (3).png" alt="Product 3">
+          <h3>Product 3</h3>
+          <p class="price" id="Price3">₦42,586</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 3', 42586, './images/dogs (3).png')">Add
+            to
+            Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="images/new/Art.png" alt="Product 4">
+          <h3>Product 4</h3>
+          <p class="price" id="price4">₦33,805</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 4', 33805, './images/new/Art.png')">Add to
+            Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="images/cat.png" alt="">
+          <h3>Product 5</h3>
+          <p class="price" id="price5">₦13,126</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 5', 13126, './images/cat.png')">Add to
+            Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="images/cat.png" alt="">
+          <h3>Product 6</h3>
+          <p class="price" id="Price6">₦28,385</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 6', 28385, 'images/cat.png')">Add to
+            Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card">
+          <img src="images/cat.png" alt="">
+          <h3>Product 7</h3>
+          <p class="price" id="price7">₦2,304</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 7', 2304, './images/cat.png')">Add to
+            Cart</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-card">
+          <img src="images/cat.png" alt="">
+          <h3>Product 8</h3>
+          <p class="price" id="price8">₦30,331</p>
+          <p class="description">A great product that you'll love. It is reliable and affordable.</p>
+          <button class="cart-btn" onclick="addToCart('Product 8',30331, './images/cat.png')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+  </section>
+  <button class="top-btn">click me</button>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="links">
+      <a href="#" class="link-one">Home</a>
+      <a href="#" class="link-2">Blog</a>
+      <a href="#" class="link-3">Conact Us</a>
+      <a href="#" class="link-4">About Us</a>
+      <a href="#" class="link-5">Github</a>
+    </div>
+
+    <span class="footer-text">
+      <h2>Q-brown</h2>
+      <p>You'r One-Stop-Destination for U To pick
+      <blockquote>a best friend</blockquote>
+    </span>
+
+
+    <div class="partners">
+      <figure>
+        <img src="images/new/Art.png" alt="">
+        <p class="pt-name">John Doe</p>
+      </figure>
+      <figure class="pt-name">
+        <img src="images/new/lamborgini(1).png" alt="">
+        <p class="pt-name">Maria Leane</p>
+      </figure>
+    </div>
+    <br>
+    <p class="footer-info">
+      &copy;Created by Anyikwa Bruno||2025
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
