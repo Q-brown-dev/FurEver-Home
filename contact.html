@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section id="header">
+    
+    <header id="mainHeader">
+      <div class="logo">
+        FurEver Home
+      </div>
+  
+      <nav>
+        <li><a href="#" class="link-for-a underline">Home</a></li>
+        <li><a href="gallery.html" class="link-for-a">Gallery</a></li>
+        <li><a href="#" class="link-for-a">About</a></li>
+        <li><a href="contact.html" class="link-for-a">Contact</a></li>
+      </nav>
+  
+  
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Light Mode
+        </a>
+  
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" onclick="darkMode()" href="#">Dark Mode</a></li>
+        </ul>
+      </div>
+  
+      <div class="cartt">
+        <div onclick="openCart()" class="open-cart">Cart (<span id="cart-count">0</span>)&#128722;</div>
+      </div>
+    </header>
+  </section>
+  
+    <!-- contact.html -->
+<section class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Us 🐾</h2>
+    <p>Have questions or want to adopt? Fill out the form below.</p>
+    <form class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Tell us about the pet you’d love to adopt..." required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
