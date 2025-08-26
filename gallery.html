@@ -1,67 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <section id="header">
-    
+  <section id="header">
+
     <header id="mainHeader">
       <div class="logo">
         FurEver Home
       </div>
-  
+
       <nav>
-        <li><a href="#" class="link-for-a underline">Home</a></li>
+        <li><a href="index.html" class="link-for-a underline">Home</a></li>
         <li><a href="gallery.html" class="link-for-a">Gallery</a></li>
         <li><a href="#" class="link-for-a">About</a></li>
         <li><a href="contact.html" class="link-for-a">Contact</a></li>
       </nav>
-  
-  
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Light Mode
-        </a>
-  
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" onclick="darkMode()" href="#">Dark Mode</a></li>
-        </ul>
-      </div>
-  
+
+
+      
+
       <div class="cartt">
         <div onclick="openCart()" class="open-cart">Cart (<span id="cart-count">0</span>)&#128722;</div>
       </div>
     </header>
   </section>
-  
-    <!-- gallery.html -->
-<section class="gallery-section">
-  <h2>Meet Our Pets 🐶🐱</h2>
-  <div class="gallery-container">
-    <!-- Card 1 -->
-    <div class="pet-card">
-      <img src="images/dog1.jpg" alt="Dog for adoption">
-      <div class="pet-info">
-        <h3>Buddy</h3>
-        <p>2 years old • Playful & Loyal</p>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="pet-card">
-      <img src="images/cat1.jpg" alt="Cat for adoption">
-      <div class="pet-info">
-        <h3>Luna</h3>
-        <p>1 year old • Calm & Friendly</p>
-      </div>
-    </div>
-    <!-- Add more pets as needed -->
-  </div>
-</section>
 
+  <!-- gallery.html -->
+  <section class="gallery-section">
+    <h2>Meet Our Pets 🐶🐱</h2>
+    <div class="gallery-container">
+      <!-- Card 1 -->
+      <div class="pet-card">
+        <img src="/images/alaska.webp" class="pet-info">
+          <h3>Buddy</h3>
+          <p>2 years old • Playful & Loyal</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="pet-card">
+        <img src="images/american eskimo.png" alt="Cat for adoption">
+        <div class="pet-info">
+          <h3>Luna</h3>
+          <p>1 year old • Calm & Friendly</p>
+        </div>
+      </div>
+      <!-- Add more pets as needed -->
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
