@@ -7,7 +7,7 @@ const header = document.getElementById("mainHeader");
 
 window.addEventListener("scroll", () => {
   header.classList.add("active");
-  
+
 })
 
 window.addEventListener("scroll", () => {
@@ -102,11 +102,14 @@ function addToCart(name, price, image) {
 
 // let responce = "Thank's for Your info we will get in touch soon!";
 // form.addEventListener("submit", () => {
-  
+
 //    document.getElementById("respond").textContent = responce;
 // })
- document.getElementById("form").addEventListener("submit", (event) => {
+document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();
   document.getElementById("respond").textContent = "Thank you for getting in touch! we will respond soon as Possible.";
   this.reset();
- });
+});
+
+// Btn Up
+
