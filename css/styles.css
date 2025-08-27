@@ -22,7 +22,9 @@ header {
 .light header {
   background: #0e0d0d;
 }
-
+.hero-for-media {
+  display: none;
+}
 .dark .hero {
   box-shadow: 0 0 8px white;
 }
@@ -606,6 +608,34 @@ footer .partners {
   transform: scale(1.05);
 }
 
+/* Side Menu */
+.menu-btn {
+  display: none;
+}
+.btn-up {
+    width: 60px;
+    height: 60px;
+    background: #46a2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all .3s ease;
+    transform: scale(0)
+}
+
+.btn-up:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, .1)
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -656,30 +686,100 @@ footer .partners {
 
 
 @media (max-width: 768px) {
-  header {
+
+  body {
+    background: #0000005a;
+  }
+
+  /* Menu Button */
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2001;
+    background: #000;
+    border: none;
+    padding: 12px 16px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+
+
+  .menu-btn:hover {
+    background: #333;
+  }
+
+  /* Side Menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* hidden initially */
+    width: 250px;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: left 0.5s ease;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+  }
+
+  .side-menu.open {
+    left: 0;
+    /* slides in */
+  }
+
+  /* Menu links */
+  .side-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+  }
+
+  .side-menu.open a {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2000;
+  }
+
+  .side-menu a:hover {
+    color: #00aced;
+  }
+
+  #header {
     display: none;
   }
 
-  .main {
+  .hero {
+    display: none;
+    z-index: none;
+  }
+  .hero-for-media {
+    background: url('../images/new/Beautiful\ interior\ bedroom.png') no-repeat center/cover;
     display: block;
   }
-
-  .for-media {
-    height: 90px;
-    background-color: #bbc2c0;
-    display: flex;
-    flex-direction: row;
-    width: -320px;
+  .hero-text {
+    text-align: center;
   }
-
-  .for-media .container-for-media {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    margin-left: 12px;
+/* Table  */
+.text-for-table-head {
+  color: orangered;
+}
+  .text {
+    color: gold;
   }
-
-  .for-media .logo h1 {
-    font-size: 1.3rem;
+  .text-for-pet-name {
+    color: gold ;
   }
 }
