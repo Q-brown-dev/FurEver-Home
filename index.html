@@ -11,12 +11,12 @@
 
 <body>
   <section id="header">
-    
+
     <header id="mainHeader">
       <h1>
         Paws Heaven
       </h1>
-  
+
       <nav>
         <ul>
           <li><a href="#" class="link-for-a underline">Home</a></li>
@@ -26,24 +26,37 @@
 
         </ul>
       </nav>
-  
-  
+
+
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           Light Mode
         </a>
-  
+
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" onclick="darkMode()" href="#">Dark Mode</a></li>
         </ul>
       </div>
-  
+
       <div class="cartt">
         <div onclick="openCart()" class="open-cart">Cart (<span id="cart-count">0</span>)&#128722;</div>
       </div>
     </header>
   </section>
+
+  <!-- Menu Button -->
+  <button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+  <!-- Side Menu -->
+  <nav class="side-menu" id="sideMenu">
+    <a href="#">🏠 Home</a>
+    <a href="#">🎨 Gallery</a>
+    <a href="#">🛒 Buy/Sell</a>
+    <a href="#">📞 Contact</a>
+    <a href="#">ℹ️ About Us</a>
+  </nav>
+
 
 
 
@@ -74,16 +87,23 @@
     <div class="cart-item"></div>
   </div>
 
-  <!-- Table Content -->
-  <h2>Pets Available</h2>
-  <h4>CLick on breeds for more</h4>
+  <div class="hero-for-media">
+    <div class="hero-text">
+      <h2>Paws Heaven</h2>
+      <p>You'r One-Stop-Destination for U To pick
+      <blockquote>a best friend</blockquote>
+      </p>
+    </div>
+  </div>
+
+
 
 
   <table class="table">
     <thead>
       <tr>
         <th class="text-for-table-head" scope="col">#</th>
-        <th class="text-for-table-head" scope="col">Types of pet</th>
+        <th class="text-for-table-head" scope="col">pet's</th>
         <th class="text-for-table-head" scope="col">Breed</th>
         <th class="text-for-table-head" scope="col">Handle</th>
       </tr>
@@ -195,7 +215,7 @@
       </div>
 
   </section>
-  <button class="top-btn">click me</button>
+  <button class="btn-up i" id="btnUp"></button>
 
   <!-- Footer Section -->
   <footer>
@@ -228,7 +248,47 @@
     <p class="footer-info">
       &copy;Created by Anyikwa Bruno||2025
     </p>
+
   </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sideMenu = document.getElementById("sideMenu");
+
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("open");
+    });
+  </script>
+
+  <script>
+    document.getElementById("btnUp").addEventListener("click", scrollUp);
+
+    function scrollUp() {
+
+      const currentScroll = document.documentElement.scrollTop;
+
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo(0, currentScroll - (currentScroll / 10));
+      }
+    }
+
+
+    btnUp = document.getElementById("btnUp");
+
+    window.onscroll = function () {
+
+      const scroll = document.documentElement.scrollTop;
+
+      if (scroll > 500) {
+        btnUp.style.transform = "scale(1)";
+      } else if (scroll < 500) {
+        btnUp.style.transform = "scale(0)";
+      }
+
+    }
+  </script>
 
   <script src="js/script.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
